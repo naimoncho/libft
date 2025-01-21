@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/14 13:33:19 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/01/14 13:33:19 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
@@ -11,11 +23,11 @@ unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 	{
 		d_len ++;
 	}
-	while (d_len + i + 1 < size)
+	if (size <= d_len)
+		return (ft_strlen(src) + size);
+	while (src[i] && (d_len + i + 1) < size)
 	{
 		dest[d_len + i] = src[i];
-		if (src[i] == '\0')
-			return (ft_strlen(src) + d_len);
 		i ++;
 	}
 	dest[d_len + i] = '\0';

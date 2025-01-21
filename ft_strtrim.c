@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/14 13:33:57 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/01/14 13:33:57 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strtrim(char const *s1, char const *set)
@@ -9,28 +21,31 @@ char *ft_strtrim(char const *s1, char const *set)
 	
 	i = 0;
 	if (!s1 || !set)
-		return (0);
+		return (NULL);
 	j = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i ++;
-	while (s1[j] && ft_strchr(set, s1[j - 1]))
+	while (j > i && ft_strchr(set, s1[j - 1]))
 		j --;
 	miau = malloc(j - i + 1);
 	if (!miau)
 		return (NULL);
-	while (i <= j)
+	x = 0;
+	while (i < j)
 	{
 		miau[x] = s1[i];
 		i ++;
 		x ++;
 	}
-	miau[i] = '\0';
+	miau[x] = '\0';
 	return (miau);
 }
 // int main()
 // {
-// 	char *s1 = "   hola que tal   ";
-// 	char *set = NULL;
-// 	printf("%s\n", ft_strtrim(s1, set));
+// 	char *s1 = "   h   ";
+// 	char *set = " ";
+// 	char *hola = ft_strtrim(s1, set);
+// 	printf("%s\n",hola);
+// 	printf ("%zu\n", ft_strlen(hola));
 // 	return 0;
 // }

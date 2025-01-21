@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/14 13:33:11 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/01/14 13:33:11 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strchr(const char *s, int c)
@@ -14,7 +26,7 @@ char *ft_strchr(const char *s, int c)
 		i ++;
 	}
 	if (to_find == '\0')
-		return (0);
+		return ((char *)&s[i]);
 	return (NULL);
 }
 // int main()

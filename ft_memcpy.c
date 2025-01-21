@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/14 13:32:58 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/01/14 13:32:58 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void *ft_memcpy(void *dst, const void *src, size_t n)
@@ -9,7 +21,11 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 	destiny = (unsigned char *)dst;
 	source = (unsigned char *)src;
 	i = 0;
-	while (source[i] != '\0' && i < n)
+	if (n == 0)
+		return (dst);
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	while (i < n)
 	{
 		destiny[i] = source[i];
 		i ++;

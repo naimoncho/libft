@@ -1,21 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/14 13:33:53 by ncheniou          #+#    #+#             */
+/*   Updated: 2025/01/14 13:33:53 by ncheniou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {
 	int i;
-	const char *last;
-	unsigned char to_find;
 
-	last = NULL;
-	to_find = (unsigned char)c;
-	if (to_find == '\0')
-		return ((char *)s);
-	i = 0;
-	while (s[i])
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (s[i] == to_find)
-			last = s;
-		i ++;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i --;
 	}
-	return ((char *)last);
+	return (0);
 }
+// int main ()
+// {
+
+// 	char *s = "hola adios";
+// 	printf ("%ss\n", ft_strrchr(s, 'a'));
+// 	return 0;
+// }
