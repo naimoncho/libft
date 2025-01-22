@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
-	unsigned char *destiny;
-	unsigned char *source;
+	size_t			i;
+	unsigned char	*destiny;
+	unsigned char	*source;
 
 	destiny = (unsigned char *)dst;
 	source = (unsigned char *)src;
@@ -26,7 +26,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 		while (len--)
 			destiny[len] = source[len];
 	}
-	else 
+	else if (dst || src)
 	{
 		while (i < len)
 		{
@@ -38,12 +38,12 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 }
 // int main()
 // {
-// 	char src[] = "miau";
-// 	char dst[8];
-// 	char dst1[8];
-// 	ft_memmove(dst + 2, src, 2);
+// 	char *src = NULL;
+// 	char *dst = NULL;
+// 	char *dst1 = NULL;
+// 	ft_memmove(dst, src, 5);
 // 	printf("mi ft_memmove: [%s]\n", dst);
-// 	memmove(dst1 + 2, src, 2);
+// 	memmove(dst1, src, 5);
 // 	printf("la ft_memmove normal: [%s]\n", dst1);
 // 	return 0;
 // }

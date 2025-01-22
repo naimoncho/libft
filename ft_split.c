@@ -83,7 +83,7 @@ char	**ft_split(char const *s, char c)
 // #include <stdio.h>
 
 // int main() {
-//     char *str = "";
+//     char *str = "HOla que tal estamos";
 //     char **result = ft_split(str, ' ');
 //     int i = 0;
 

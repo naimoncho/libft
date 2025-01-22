@@ -14,14 +14,14 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
-	int result;
+	unsigned int	i;
+	int				result;
 
 	i = 0;
 	result = 0;
-	if ( n <= 0)
+	if (n <= 0)
 		return (0);
-	while (i < (int)n)
+	while (i < (unsigned int)n)
 	{
 		if ((unsigned char)s1[i] != (unsigned char)s2[i])
 		{
@@ -34,3 +34,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+// int main()
+// {
+//     char s1[] = "1234";
+//     char s2[] = "1235";
+//     printf("%d\n", strncmp(s1,s2, -1));
+//     printf("%d", ft_strncmp(s1,s2, -1));
+//     return(0);
+// }

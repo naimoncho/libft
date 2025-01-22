@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	unsigned char to_find;
+	int				i;
+	unsigned char	to_find;
 
 	to_find = (unsigned char)c;
 	i = 0;
@@ -32,7 +32,6 @@ char *ft_strchr(const char *s, int c)
 // int main()
 // {
 //     const char *s = "Hello, world!";
-    
 //     printf("Result (search 'o'): %s\n", ft_strchr(s, 'o'));
 //     printf("Result (search 'x'): %s\n", ft_strchr(s, 'x'));
 // 	printf("Result (search '\\0'): %s\n", ft_strchr(s, '\0'));
