@@ -10,6 +10,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
+bonus: ()
 
 clean:
 	rm -f $(OBJS)
