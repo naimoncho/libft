@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 13:33:11 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/01/14 13:33:11 by ncheniou         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -29,11 +17,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-// int main()
-// {
-//     const char *s = "Hello, world!";
-//     printf("Result (search 'o'): %s\n", ft_strchr(s, 'o'));
-//     printf("Result (search 'x'): %s\n", ft_strchr(s, 'x'));
-// 	printf("Result (search '\\0'): %s\n", ft_strchr(s, '\0'));
-//     return 0;
-// }

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 13:33:57 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/01/14 13:33:57 by ncheniou         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -40,12 +28,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	miau[x] = '\0';
 	return (miau);
 }
-// int main()
-// {
-// 	char *s1 = "   h   ";
-// 	char *set = " ";
-// 	char *hola = ft_strtrim(s1, set);
-// 	printf("%s\n",hola);
-// 	printf ("%zu\n", ft_strlen(hola));
-// 	return 0;
-// }

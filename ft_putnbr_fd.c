@@ -1,18 +1,6 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ncheniou <ncheniou@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 22:21:30 by ncheniou          #+#    #+#             */
-/*   Updated: 2025/01/21 22:21:30 by ncheniou         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-void	ft_recursive(int n, int fd)
+static void	ft_recursive(int n, int fd)
 {
 	char	character_n;
 	int		number;
